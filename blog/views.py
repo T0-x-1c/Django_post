@@ -7,11 +7,11 @@ def post_list(request):
 
 
 def page_post(request, post_id):
-    Post.objects.get(id = post_id)
+    post = Post.objects.get(id = post_id)
 
     context = {
         "post": post,
     }
-    return render{
-        template_name = 
-    }
+    return render(
+        "page_post.html", context
+    )
